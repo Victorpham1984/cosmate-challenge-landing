@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# COSMATE Challenge Landing Page
+
+🚀 High-conversion landing page for the COSMATE 10-Day Content Automation Challenge.
+
+## Tech Stack
+- **Next.js 14** (App Router)
+- **TailwindCSS** — utility-first styling
+- **Framer Motion** — scroll-triggered animations
+- **TypeScript** — full type safety
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev    # http://localhost:3000
+npm run build  # Production build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Structure
+```
+app/page.tsx                    — Main page (7 sections)
+components/sections/Hero.tsx    — Hero with gradient + floating shapes
+components/sections/VideoSection.tsx — Video placeholder with custom UI
+components/sections/Overview.tsx    — 3-card challenge overview
+components/sections/HowItWorks.tsx  — 4-step vertical timeline
+components/sections/ChatbotSection.tsx — Typebot embed placeholder
+components/sections/FAQ.tsx         — Accordion FAQ
+components/sections/FinalCTA.tsx    — Final call-to-action
+components/ui/Button.tsx        — Reusable animated button
+components/ui/Card.tsx          — Reusable hover card
+lib/animations.ts               — Framer Motion variants
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deployment
+Connect this repo to [Vercel](https://vercel.com) for automatic deployments.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## TODO
+- [ ] Add Typebot embed script
+- [ ] Replace video placeholder with actual video
+- [ ] Add Lottie animations for icons
+- [ ] Final copy from content team
