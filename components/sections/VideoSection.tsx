@@ -19,9 +19,9 @@ export default function VideoSection() {
           className="text-center mb-10"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-dark mb-4">
-            Xem cách COSMATE hoạt động
+            Xem cách một chủ agency chuyển sang tự động hóa 40+ bài/tháng
           </h2>
-          <p className="text-gray-600 text-lg">Chỉ 60 giây để hiểu toàn bộ hệ thống</p>
+          <p className="text-gray-600 text-lg">Case study thực tế: từ 1 ý tưởng tạo đồng thời post mạng xã hội, email, video ngắn và avatar video.</p>
         </motion.div>
 
         <motion.div

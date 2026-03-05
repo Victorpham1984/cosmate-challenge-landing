@@ -5,11 +5,11 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin", "vietnamese"] });
 
 export const metadata: Metadata = {
-  title: "COSMATE Challenge — 10 Ngày Xây Dựng Hệ Thống Content Tự Động",
-  description: "Từ zero đến tự động hóa 4 loại content cùng lúc — không cần thuê freelancer. Tham gia challenge 15 ngày cùng COSMATE.",
+  title: "COSMATE Challenge: 10 Ngày Xây Dựng 4 Hệ Thống Content Tự Động",
+  description: "Khóa học intensive 10 ngày, 3h/ngày. Xây dựng 4 content pipelines (Social, Email, Video, Avatar) tự động hóa hoàn toàn. Không cần freelancer, sở hữu hệ thống vĩnh viễn.",
   openGraph: {
-    title: "COSMATE Challenge — 10 Ngày Xây Dựng Hệ Thống Content Tự Động",
-    description: "Từ zero đến tự động hóa 4 loại content cùng lúc — không cần thuê freelancer.",
+    title: "COSMATE Challenge: 10 Ngày Xây Dựng 4 Hệ Thống Content Tự Động",
+    description: "Khóa học intensive 10 ngày, 3h/ngày. Xây dựng 4 content pipelines (Social, Email, Video, Avatar) tự động hóa hoàn toàn. Không cần freelancer, sở hữu hệ thống vĩnh viễn.",
     type: "website",
   },
 };

@@ -34,10 +34,10 @@ export default function ChatbotSection() {
           className="text-center mb-10"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-dark mb-4">
-            Bắt đầu bằng cách chat với AI assistant của chúng tôi
+            Bắt đầu bằng cách trả lời vài câu hỏi với AI assistant
           </h2>
           <p className="text-gray-600 text-lg">
-            Trả lời vài câu hỏi đơn giản để chúng tôi tùy chỉnh challenge phù hợp với bạn
+            Xem lộ trình phù hợp cho bạn
           </p>
         </motion.div>
 

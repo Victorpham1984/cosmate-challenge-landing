@@ -5,10 +5,10 @@ import { useRef } from "react";
 import { fadeInUp, staggerContainer } from "@/lib/animations";
 
 const steps = [
-  { icon: "💬", title: "Chat với AI assistant", desc: "Trả lời vài câu hỏi để chúng tôi hiểu nhu cầu của bạn", color: "bg-purple-500" },
-  { icon: "💳", title: "Thanh toán qua QR code (Sepay)", desc: "Thanh toán nhanh chóng và an toàn qua mã QR", color: "bg-blue-500" },
-  { icon: "📧", title: "Nhận email + link Skool group", desc: "Truy cập ngay vào cộng đồng và tài liệu challenge", color: "bg-pink-500" },
-  { icon: "🚀", title: "Bắt đầu challenge ngày hôm sau", desc: "Bắt tay vào xây dựng hệ thống content tự động", color: "bg-orange-500" },
+  { icon: "💬", title: "Bắt đầu với AI chatbot", desc: "Trả lời vài câu hỏi ngắn để hệ thống xác định mục tiêu, mức độ hiện tại và gợi ý lộ trình phù hợp. Bạn nhận ngay hướng dẫn tham gia rõ ràng.", color: "bg-purple-500" },
+  { icon: "💳", title: "Thanh toán qua QR code", desc: "Quét mã và thanh toán trong chưa đến 1 phút. Giao dịch xác nhận tự động, bảo mật, không cần chờ xử lý thủ công.", color: "bg-blue-500" },
+  { icon: "📧", title: "Nhận email + link Skool group", desc: "Ngay sau khi thanh toán, bạn nhận email chào mừng, tài liệu chuẩn bị và link vào cộng đồng Skool để kết nối mentor và học viên.", color: "bg-pink-500" },
+  { icon: "🚀", title: "Bắt đầu challenge ngày hôm sau", desc: "Vào ngày học đầu tiên, bạn được hướng dẫn thiết lập từ cơ bản, có phiên live hỗ trợ hằng ngày để đảm bảo theo kịp nhịp độ nhanh và hoàn thành đủ 4 hệ thống.", color: "bg-orange-500" },
 ];
 
 export default function HowItWorks() {

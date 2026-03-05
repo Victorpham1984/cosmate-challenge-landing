@@ -8,20 +8,20 @@ import { fadeInUp, staggerContainer } from "@/lib/animations";
 const cards = [
   {
     icon: "📅",
-    title: "15 Ngày, 2h/Ngày",
-    description: "Lộ trình rõ ràng, từng bước một. Chỉ cần 2 giờ mỗi ngày để xây dựng hệ thống hoàn chỉnh.",
+    title: "10 Ngày Intensive, 3h/Ngày (1h Video + 2h Workshop)",
+    description: "Toàn bộ lộ trình gói gọn trong 10 ngày: xây đủ nền tảng, 4 hệ thống content, tích hợp và vận hành. Tổng 30 giờ học — nhanh, dồn dập, hiệu quả; mỗi ngày đều có hướng dẫn và thực hành trực tiếp.",
     gradient: "from-blue-500 to-purple-500",
   },
   {
     icon: "✅",
-    title: "4 Content Pipelines + Master Dashboard",
-    description: "Tạo 4 pipeline content tự động và dashboard quản lý tất cả trong một nơi.",
+    title: "4 Hệ Thống Content + Dashboard Quản Lý",
+    description: "Sau challenge, bạn sở hữu bộ máy tạo nội dung đa kênh: social post, email newsletter, video short, avatar video; kèm dashboard duyệt nội dung và lịch 30 ngày.",
     gradient: "from-orange-500 to-pink-500",
   },
   {
     icon: "🚀",
-    title: "Hệ thống COSMATE hoàn chỉnh",
-    description: "Kết thúc challenge với hệ thống content automation hoạt động 24/7.",
+    title: "Từ 0 Đến Tự Động Hóa Hoàn Chỉnh Trong 10 Ngày",
+    description: "1 đầu vào tạo ra 4 đầu ra cùng lúc, tiết kiệm thời gian triển khai mỗi tuần, giảm chi phí thuê ngoài và mở rộng sản xuất content mà vẫn giữ chất lượng ổn định. Nhịp độ nhanh, yêu cầu cam kết cao, đổi lại bạn có hệ thống vận hành thực tế ngay sau challenge.",
     gradient: "from-green-500 to-teal-500",
   },
 ];

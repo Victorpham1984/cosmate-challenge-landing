@@ -50,23 +50,23 @@ export default function Hero() {
           variants={fadeInUp}
           className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6"
         >
-          10 Ngày Xây Dựng Hệ Thống{" "}
+          10 Ngày Xây Dựng 4 Hệ Thống{" "}
           <span className="bg-gradient-to-r from-yellow-300 to-accent bg-clip-text text-transparent">
             Content Tự Động
           </span>{" "}
-          COSMATE
+          — Không Cần Freelancer
         </motion.h1>
 
         <motion.p
           variants={fadeInUp}
           className="text-lg md:text-xl text-white/80 mb-10 max-w-2xl mx-auto leading-relaxed"
         >
-          Từ zero đến tự động hóa 4 loại content cùng lúc — không cần thuê freelancer
+          Khóa học intensive, dồn dập và hiệu quả cao: 10 ngày để build trọn bộ Social Post, Email Newsletter, Video Short, Avatar Video. Tổng 30 giờ học (1h video + 2h workshop/ngày), nhịp độ nhanh nhưng kết quả rõ ràng.
         </motion.p>
 
         <motion.div variants={fadeInUp}>
           <Button onClick={scrollToChatbot} className="text-xl px-10 py-5">
-            Bắt Đầu Ngay →
+            Bắt Đầu Challenge Ngay →
           </Button>
         </motion.div>
 

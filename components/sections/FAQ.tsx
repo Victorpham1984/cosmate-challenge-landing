@@ -5,11 +5,14 @@ import { useRef, useState } from "react";
 import { fadeInUp, staggerContainer } from "@/lib/animations";
 
 const faqs = [
-  { q: "Tôi chưa biết gì về AI, có phù hợp không?", a: "Hoàn toàn phù hợp! Challenge được thiết kế cho người mới bắt đầu. Bạn sẽ được hướng dẫn từng bước từ cơ bản đến nâng cao." },
-  { q: "Thời gian học bao lâu mỗi ngày?", a: "Chỉ cần 2 giờ mỗi ngày trong 15 ngày. Bạn có thể linh hoạt sắp xếp theo lịch của mình." },
-  { q: "Có hoàn tiền không nếu không phù hợp?", a: "Chúng tôi cam kết hoàn tiền 100% trong 3 ngày đầu nếu bạn cảm thấy không phù hợp." },
-  { q: "Công nghệ nào được dùng?", a: "COSMATE sử dụng các công cụ AI hàng đầu, được tích hợp thành hệ thống tự động hoàn chỉnh. Không cần biết code." },
-  { q: "Có support không?", a: "Có! Bạn sẽ được support 1-1 qua Skool group và có thể hỏi bất kỳ lúc nào trong suốt challenge." },
+  { q: "Tôi chưa biết gì về AI/automation, có phù hợp không?", a: "Có. Chương trình được thiết kế cho người mới từ zero đến basic. Mỗi buổi đều đi từng bước, có video hướng dẫn + live thực hành + hỗ trợ xử lý lỗi trực tiếp." },
+  { q: "Thời gian học bao lâu mỗi ngày?", a: "Bạn cần 3h/ngày: 1h video bài tập về nhà + 2h workshop live. Tổng 30 giờ trong 10 ngày — nhịp độ nhanh, yêu cầu cam kết cao để đạt kết quả tốt nhất." },
+  { q: "10 ngày có đủ thời gian không? Tôi lo không theo kịp.", a: "Chương trình được thiết kế intensive để build nhanh. Nếu bạn cam kết 3h/ngày và làm bài tập đầy đủ, bạn sẽ hoàn thành 4 pipelines. Live workshop giúp giải đáp ngay, không bỏ lại phía sau." },
+  { q: "Công nghệ nào được sử dụng?", a: "Bạn sẽ dùng n8n, Baserow, FFmpeg, Postiz và AI APIs theo hướng no-code/low-code. Không yêu cầu nền tảng lập trình để bắt đầu." },
+  { q: "Có hoàn tiền không nếu không phù hợp?", a: "Có chính sách hoàn tiền 7 ngày nếu bạn cảm thấy không phù hợp sau khi đã tham gia đến Day 3 và làm theo đúng hướng dẫn cơ bản. Mục tiêu là minh bạch và công bằng cho cả hai bên." },
+  { q: "Tôi có được support không?", a: "Có. Bạn được tham gia live session mỗi ngày, hỏi đáp trong cộng đồng Skool và nhận hỗ trợ khi gặp lỗi triển khai để không bị \"kẹt\" giữa chừng." },
+  { q: "Chi phí chạy hệ thống sau khi học xong là bao nhiêu?", a: "Tùy sản lượng nội dung, chi phí có thể bắt đầu rất thấp. Mốc tham khảo: khoảng 13.000 VNĐ cho 1 bài blog dùng API. n8n/Baserow có gói free để bạn khởi động trước khi scale." },
+  { q: "Kết quả có giống demo không?", a: "Demo là case thật từ học viên, nhưng kết quả sẽ phụ thuộc vào mức độ áp dụng và thị trường của bạn. Chúng tôi tập trung vào hệ thống bền vững, không hứa hẹn \"thần tốc\" phi thực tế." },
 ];
 
 function FAQItem({ item, isOpen, toggle }: { item: typeof faqs[0]; isOpen: boolean; toggle: () => void }) {
