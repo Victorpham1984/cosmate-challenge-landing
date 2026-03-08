@@ -1,79 +1,137 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Button from "@/components/ui/Button";
-import { fadeInUp, staggerContainer } from "@/lib/animations";
+
+const inputItems = ["Topic", "YouTube Link", "Website Link"];
+const outputItems = [
+  { emoji: "🎭", label: "Avatar Video" },
+  { emoji: "🎬", label: "Video Short" },
+  { emoji: "📱", label: "Social Post" },
+  { emoji: "📧", label: "Email" },
+];
+
+function FlowDiagram() {
+  return (
+    <div className="mt-12 md:mt-16 flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 max-w-4xl mx-auto">
+      {/* Input */}
+      <motion.div
+        initial={{ opacity: 0, x: -30 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ delay: 0.5, duration: 0.6 }}
+        className="glow-border rounded-xl p-4 bg-dark-card min-w-[180px]"
+      >
+        <p className="text-xs text-neon-blue mb-2 font-semibold uppercase tracking-wider">Input</p>
+        {inputItems.map((item) => (
+          <div key={item} className="text-sm text-gray-300 py-1 flex items-center gap-2">
+            <span className="w-1.5 h-1.5 rounded-full bg-neon-blue inline-block" />
+            {item}
+          </div>
+        ))}
+      </motion.div>
+
+      {/* Flow lines + Processing */}
+      <div className="flex flex-col md:flex-row items-center gap-2">
+        <div className="hidden md:block w-16 flow-line" />
+        <motion.div
+          animate={{ scale: [1, 1.1, 1] }}
+          transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
+          className="w-16 h-16 rounded-full bg-dark-card border border-neon-purple/40 flex items-center justify-center"
+        >
+          <span className="text-2xl">⚙️</span>
+        </motion.div>
+        <div className="hidden md:block w-16 flow-line" />
+      </div>
+
+      {/* Outputs */}
+      <motion.div
+        initial={{ opacity: 0, x: 30 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ delay: 0.7, duration: 0.6 }}
+        className="grid grid-cols-2 gap-3"
+      >
+        {outputItems.map((item) => (
+          <div
+            key={item.label}
+            className="glow-border rounded-lg p-3 bg-dark-card text-center min-w-[110px] hover:border-neon-blue/50 transition-all"
+          >
+            <span className="text-xl">{item.emoji}</span>
+            <p className="text-xs text-gray-300 mt-1">{item.label}</p>
+          </div>
+        ))}
+      </motion.div>
+    </div>
+  );
+}
 
 export default function Hero() {
-  const scrollToChatbot = () => {
-    document.getElementById("typebot-section")?.scrollIntoView({ behavior: "smooth" });
+  const scrollToChat = () => {
+    document.getElementById("chatbot")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-purple-900 via-primary to-accent-pink">
-      {/* Animated background shapes */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-accent/20 rounded-full blur-3xl animate-float" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent-blue/20 rounded-full blur-3xl animate-float-delay" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent-pink/10 rounded-full blur-3xl animate-float-slow" />
-        {/* Floating geometric shapes */}
+    <section className="relative min-h-screen flex items-center justify-center px-4 py-20 grid-bg">
+      {/* Floating particles */}
+      {[...Array(5)].map((_, i) => (
         <motion.div
-          className="absolute top-[15%] right-[20%] w-16 h-16 border-4 border-white/20 rounded-xl"
-          animate={{ rotate: 360, y: [-10, 10, -10] }}
-          transition={{ rotate: { duration: 20, repeat: Infinity }, y: { duration: 4, repeat: Infinity } }}
+          key={i}
+          className="absolute w-1 h-1 rounded-full bg-neon-blue/30"
+          style={{
+            top: `${15 + i * 18}%`,
+            left: `${10 + i * 20}%`,
+          }}
+          animate={{ y: [-10, 10, -10], opacity: [0.2, 0.6, 0.2] }}
+          transition={{ repeat: Infinity, duration: 4 + i, ease: "easeInOut" }}
         />
-        <motion.div
-          className="absolute bottom-[25%] left-[15%] w-12 h-12 bg-accent/30 rounded-full"
-          animate={{ scale: [1, 1.3, 1], y: [-15, 15, -15] }}
-          transition={{ duration: 5, repeat: Infinity }}
-        />
-        <motion.div
-          className="absolute top-[40%] right-[10%] w-8 h-8 bg-yellow-400/30 rotate-45"
-          animate={{ rotate: [45, 225, 45], x: [-10, 10, -10] }}
-          transition={{ duration: 7, repeat: Infinity }}
-        />
-      </div>
+      ))}
 
-      <motion.div
-        className="relative z-10 text-center px-4 max-w-4xl mx-auto"
-        variants={staggerContainer}
-        initial="hidden"
-        animate="visible"
-      >
-        <motion.div variants={fadeInUp} className="mb-6">
-          <span className="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white/90 text-sm font-medium border border-white/20">
-            🚀 Challenge mới — Bắt đầu ngay hôm nay
-          </span>
-        </motion.div>
-
+      <div className="text-center max-w-5xl mx-auto relative z-10">
         <motion.h1
-          variants={fadeInUp}
-          className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight"
         >
-          10 Ngày Xây Dựng 4 Hệ Thống{" "}
-          <span className="bg-gradient-to-r from-yellow-300 to-accent bg-clip-text text-transparent">
-            Content Tự Động
-          </span>{" "}
-          — Không Cần Freelancer
+          Xây Hệ Thống Sản Xuất Content{" "}
+          <span className="gradient-text">Tự Động</span> Trong 10 Ngày
         </motion.h1>
 
         <motion.p
-          variants={fadeInUp}
-          className="text-lg md:text-xl text-white/80 mb-10 max-w-2xl mx-auto leading-relaxed"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.7 }}
+          className="mt-6 text-gray-400 text-base sm:text-lg md:text-xl max-w-3xl mx-auto"
         >
-          Khóa học intensive, dồn dập và hiệu quả cao: 10 ngày để build trọn bộ Social Post, Email Newsletter, Video Short, Avatar Video. Tổng 30 giờ học (1h video + 2h workshop/ngày), nhịp độ nhanh nhưng kết quả rõ ràng.
+          Từ 1 chủ đề → Avatar Video + Video Short + Social Post + Email
+          Newsletter — đăng tự động lên 10+ nền tảng
         </motion.p>
 
-        <motion.div variants={fadeInUp}>
-          <Button onClick={scrollToChatbot} className="text-xl px-10 py-5">
-            Bắt Đầu Challenge Ngay →
-          </Button>
+        <FlowDiagram />
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.9, duration: 0.6 }}
+          className="mt-10"
+        >
+          <button
+            onClick={scrollToChat}
+            className="px-8 py-4 bg-gradient-to-r from-neon-blue to-neon-purple text-white font-semibold rounded-xl text-lg glow-blue hover:scale-105 transition-transform"
+          >
+            Tham Gia Challenge Ngay
+          </button>
+
+          <div className="flex items-center justify-center gap-4 mt-6 text-sm text-gray-400">
+            <span className="flex items-center gap-1.5">
+              <span className="w-2 h-2 rounded-full bg-green-400" />
+              100% Miễn Phí
+            </span>
+            <span>•</span>
+            <span>10 Ngày</span>
+            <span>•</span>
+            <span>Opensource Stack</span>
+          </div>
         </motion.div>
-
-        <motion.p variants={fadeInUp} className="mt-6 text-white/60 text-sm">
-          ✓ Miễn phí tư vấn &nbsp; ✓ Không cần kinh nghiệm &nbsp; ✓ Support 1-1
-        </motion.p>
-      </motion.div>
+      </div>
     </section>
   );
 }

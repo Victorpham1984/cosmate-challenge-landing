@@ -4,42 +4,48 @@ const config: Config = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./lib/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
       colors: {
-        primary: {
-          DEFAULT: "#7C3AED",
-          light: "#A78BFA",
-          dark: "#5B21B6",
+        dark: {
+          DEFAULT: "#0a0a1a",
+          card: "#0f0f2a",
+          border: "#1a1a3e",
         },
-        accent: {
-          DEFAULT: "#F97316",
-          pink: "#EC4899",
-          blue: "#2563EB",
+        neon: {
+          blue: "#00d4ff",
+          purple: "#8b5cf6",
+          cyan: "#06b6d4",
         },
-        dark: "#1F2937",
       },
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
-        heading: ["Inter", "system-ui", "sans-serif"],
       },
       animation: {
         "float": "float 6s ease-in-out infinite",
-        "float-delay": "float 6s ease-in-out 2s infinite",
-        "float-slow": "float 8s ease-in-out 1s infinite",
-        "pulse-slow": "pulse 3s ease-in-out infinite",
-        "gradient": "gradient 8s ease infinite",
+        "pulse-glow": "pulseGlow 2s ease-in-out infinite",
+        "flow-dot": "flowDot 2s linear infinite",
+        "grid-fade": "gridFade 4s ease-in-out infinite",
       },
       keyframes: {
         float: {
           "0%, 100%": { transform: "translateY(0px)" },
-          "50%": { transform: "translateY(-20px)" },
+          "50%": { transform: "translateY(-10px)" },
         },
-        gradient: {
-          "0%, 100%": { backgroundPosition: "0% 50%" },
-          "50%": { backgroundPosition: "100% 50%" },
+        pulseGlow: {
+          "0%, 100%": { opacity: "0.4", transform: "scale(1)" },
+          "50%": { opacity: "1", transform: "scale(1.05)" },
+        },
+        flowDot: {
+          "0%": { left: "0%", opacity: "0" },
+          "10%": { opacity: "1" },
+          "90%": { opacity: "1" },
+          "100%": { left: "100%", opacity: "0" },
+        },
+        gridFade: {
+          "0%, 100%": { opacity: "0.03" },
+          "50%": { opacity: "0.06" },
         },
       },
     },

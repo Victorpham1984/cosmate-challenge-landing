@@ -1,19 +1,23 @@
+"use client";
+
 import Hero from "@/components/sections/Hero";
-import VideoSection from "@/components/sections/VideoSection";
-import Overview from "@/components/sections/Overview";
-import HowItWorks from "@/components/sections/HowItWorks";
-import ChatbotSection from "@/components/sections/ChatbotSection";
+import VideoDemo from "@/components/sections/VideoDemo";
+import OutputCards from "@/components/sections/OutputCards";
+import TechFeatures from "@/components/sections/TechFeatures";
+import Timeline from "@/components/sections/Timeline";
+import ChatbotEmbed from "@/components/sections/ChatbotEmbed";
 import FAQ from "@/components/sections/FAQ";
 import FinalCTA from "@/components/sections/FinalCTA";
 
 export default function Home() {
   return (
-    <main>
+    <main className="min-h-screen bg-dark overflow-hidden">
       <Hero />
-      <VideoSection />
-      <Overview />
-      <HowItWorks />
-      <ChatbotSection />
+      <VideoDemo />
+      <OutputCards />
+      <TechFeatures />
+      <Timeline />
+      <ChatbotEmbed />
       <FAQ />
       <FinalCTA />
     </main>
