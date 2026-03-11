@@ -13,13 +13,10 @@ const features = [
 ];
 
 const pipelineSteps = [
-  "Create Topics",
-  "In-Processing Blog",
-  "Generate Content",
-  "Finalize Post",
-  "Multi Pipeline",
-  "Approve Image",
-  "Publishing",
+  "Create Topic",
+  "Generate Multi Script",
+  "Approve Content",
+  "Publishing Multi Social",
   "Backup",
 ];
 
@@ -32,7 +29,7 @@ export default function TechFeatures() {
             Sức Mạnh <span className="gradient-text">Bên Trong</span>
           </h2>
           <p className="text-center text-gray-400 mb-12">
-            Công nghệ đẳng cấp, chi phí bằng 0
+            Công nghệ mã nguồn mở tốt nhất trên GitHub, tiết kiệm chi phí phần mềm SAAS đắt đỏ
           </p>
         </ScrollReveal>
 

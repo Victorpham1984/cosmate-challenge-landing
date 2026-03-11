@@ -10,7 +10,7 @@ const faqs = [
   { q: "10 ngày có đủ thời gian xây xong hệ thống?", a: "Đủ. Chương trình thiết kế intensive 3h/ngày, có template và workflow sẵn để bạn customize." },
   { q: "Cần chuẩn bị gì trước khi tham gia?", a: "Laptop/PC, internet ổn định, và sẵn sàng cam kết 3h/ngày trong 10 ngày." },
   { q: "Sau 10 ngày tôi sẽ có gì?", a: "1 hệ thống hoàn chỉnh: nhập topic → tự động tạo 4 loại content → đăng lên 10+ nền tảng. Của bạn vĩnh viễn." },
-  { q: "Opensource có nghĩa là chất lượng kém?", a: "Ngược lại. n8n, FFmpeg, Baserow là những tool được hàng triệu developer tin dùng. Bạn tiết kiệm chi phí mà không giảm chất lượng." },
+  { q: "Opensource có nghĩa là chất lượng kém?", a: "Tôi lựa chọn những ứng dụng mã nguồn mở tốt nhất thị trường hiện tại với chi phí tối thiểu, là các ứng dụng hàng trăm nghìn khách hàng cài đặt sử dụng, bạn tiết kiệm chi phí mà không giảm chất lượng." },
   { q: "Có hỗ trợ sau challenge không?", a: "Có. Cộng đồng COSMATE tiếp tục hỗ trợ, chia sẻ workflow mới và cập nhật tính năng." },
 ];
 

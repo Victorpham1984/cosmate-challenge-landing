@@ -91,8 +91,8 @@ export default function Hero() {
           transition={{ duration: 0.7 }}
           className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight"
         >
-          Xây Hệ Thống Sản Xuất Content{" "}
-          <span className="gradient-text">Tự Động</span> Trong 10 Ngày
+          Từ 5 Tiếng Mỗi Ngày Xuống 30 Phút —{" "}
+          <span className="gradient-text">Xây Hệ Thống Content Tự Động</span> Trong 10 Ngày
         </motion.h1>
 
         <motion.p
@@ -101,8 +101,8 @@ export default function Hero() {
           transition={{ delay: 0.2, duration: 0.7 }}
           className="mt-6 text-gray-400 text-base sm:text-lg md:text-xl max-w-3xl mx-auto"
         >
-          Từ 1 chủ đề → Avatar Video + Video Short + Social Post + Email
-          Newsletter — đăng tự động lên 10+ nền tảng
+          Xây xong 4 pipeline: Social Post, Email, Video Ngắn, Avatar Video
+          — bạn trở thành người điều khiển, không phải người cặm cụi gõ từng bài.
         </motion.p>
 
         <FlowDiagram />

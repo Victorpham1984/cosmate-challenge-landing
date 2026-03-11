@@ -12,23 +12,13 @@ export default function VideoDemo() {
         <div className="relative rounded-2xl overflow-hidden glow-border bg-dark-card p-2">
           {/* Monitor frame effect */}
           <div className="relative aspect-video bg-black/50 rounded-xl flex items-center justify-center">
-            <video
-              className="w-full h-full rounded-xl object-cover"
-              poster=""
-              controls
-              preload="none"
-            >
-              {/* Video source will be added */}
-              <source src="" type="video/mp4" />
-            </video>
-            {/* Play overlay */}
-            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-              <div className="w-16 h-16 rounded-full bg-neon-blue/20 backdrop-blur-sm flex items-center justify-center border border-neon-blue/40">
-                <svg className="w-6 h-6 text-neon-blue ml-1" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              </div>
-            </div>
+            <iframe
+              className="w-full h-full rounded-xl"
+              src="https://www.youtube.com/embed/DGdWWMKlF0g"
+              title="COSMATE Demo"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
           </div>
           {/* Monitor base */}
           <div className="flex justify-center mt-2">

@@ -24,15 +24,13 @@ export default function FinalCTA() {
           >
             Tham Gia Challenge Ngay
           </button>
-          <p className="text-gray-500 text-sm mt-6">
-            Đã có <span className="text-neon-blue font-semibold">XXX</span> người đăng ký
-          </p>
+{/* removed */}
         </ScrollReveal>
 
         {/* Footer */}
         <div className="mt-20 pt-8 border-t border-dark-border">
           <p className="text-gray-600 text-xs">
-            © 2025 COSMATE. Built with ❤️ for content creators.
+            © 2026 COSMATE. Built by BizMateHub
           </p>
         </div>
       </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import ScrollReveal from "@/components/ui/ScrollReveal";
+import { Standard } from "@typebot.io/react";
 
 export default function ChatbotEmbed() {
   return (
@@ -18,16 +19,15 @@ export default function ChatbotEmbed() {
             <div className="px-6 py-4 border-b border-dark-border flex items-center gap-2">
               <div className="w-3 h-3 rounded-full bg-neon-blue animate-pulse-glow" />
               <span className="text-sm font-semibold text-white">
-                Chat với COSMATE
+                Đăng ký tham gia COSMATE Challenge
               </span>
             </div>
-            <div className="p-6 min-h-[400px] flex items-center justify-center">
-              {/* Typebot embed script will be added by Sếp */}
-              <div id="typebot-container" className="w-full h-full min-h-[350px]">
-                <p className="text-gray-500 text-sm text-center">
-                  Chatbot đang được kết nối...
-                </p>
-              </div>
+            <div className="min-h-[500px]">
+              <Standard
+                typebot="customer-support-zm"
+                apiHost="https://bot.bizmate.app"
+                style={{ width: "100%", height: "500px" }}
+              />
             </div>
           </div>
         </ScrollReveal>
