@@ -14,7 +14,7 @@ export default function VideoDemo() {
           <div className="relative aspect-video bg-black/50 rounded-xl flex items-center justify-center">
             <iframe
               className="w-full h-full rounded-xl"
-              src="https://www.youtube.com/embed/DGdWWMKlF0g"
+              src="https://www.youtube.com/embed/EVY3Utsala4"
               title="COSMATE Demo"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
