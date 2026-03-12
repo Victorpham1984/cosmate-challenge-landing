@@ -2,8 +2,28 @@
 
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import { Standard } from "@typebot.io/react";
+import { useEffect, useRef } from "react";
+import { pushDataLayer } from "@/lib/gtm";
 
 export default function ChatbotEmbed() {
+  const hasTrackedStart = useRef(false);
+
+  useEffect(() => {
+    pushDataLayer("typebot_render", {
+      section: "chatbot",
+      bot: "customer-support-zm",
+    });
+  }, []);
+
+  const trackTypebotStart = () => {
+    if (hasTrackedStart.current) return;
+    hasTrackedStart.current = true;
+    pushDataLayer("typebot_start", {
+      section: "chatbot",
+      bot: "customer-support-zm",
+    });
+  };
+
   return (
     <section id="chatbot" className="py-20 px-4">
       <div className="max-w-3xl mx-auto">
@@ -22,7 +42,7 @@ export default function ChatbotEmbed() {
                 Đăng ký tham gia COSMATE Challenge
               </span>
             </div>
-            <div className="min-h-[500px]">
+            <div className="min-h-[500px]" onClick={trackTypebotStart}>
               <Standard
                 typebot="customer-support-zm"
                 apiHost="https://bot.bizmate.app"

@@ -1,9 +1,14 @@
 "use client";
 
 import ScrollReveal from "@/components/ui/ScrollReveal";
+import { pushDataLayer } from "@/lib/gtm";
 
 export default function FinalCTA() {
   const scrollToChat = () => {
+    pushDataLayer("cta_click", {
+      cta_name: "final_join_challenge",
+      section: "final_cta",
+    });
     document.getElementById("chatbot")?.scrollIntoView({ behavior: "smooth" });
   };
 

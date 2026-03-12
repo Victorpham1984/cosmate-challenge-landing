@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { pushDataLayer } from "@/lib/gtm";
 
 const inputItems = ["Topic", "YouTube Link", "Website Link"];
 const outputItems = [
@@ -65,6 +66,10 @@ function FlowDiagram() {
 
 export default function Hero() {
   const scrollToChat = () => {
+    pushDataLayer("cta_click", {
+      cta_name: "hero_join_challenge",
+      section: "hero",
+    });
     document.getElementById("chatbot")?.scrollIntoView({ behavior: "smooth" });
   };
 

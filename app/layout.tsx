@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import GTM from "@/components/GTM";
+import { GTM_ID } from "@/lib/gtm";
 
 const inter = Inter({ subsets: ["latin", "vietnamese"] });
 
@@ -24,6 +26,17 @@ export default function RootLayout({
   return (
     <html lang="vi" className="scroll-smooth">
       <body className={`${inter.className} bg-dark text-white antialiased`}>
+        <GTM />
+        {GTM_ID ? (
+          <noscript>
+            <iframe
+              src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+              height="0"
+              width="0"
+              style={{ display: "none", visibility: "hidden" }}
+            />
+          </noscript>
+        ) : null}
         {children}
       </body>
     </html>
