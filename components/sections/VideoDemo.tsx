@@ -13,12 +13,13 @@ export default function VideoDemo() {
           {/* Monitor frame effect */}
           <div className="relative aspect-video bg-black/50 rounded-xl flex items-center justify-center">
             <iframe
-              className="w-full h-full rounded-xl"
+              className="w-full h-full absolute top-0 left-0 rounded-xl"
               src="https://www.youtube.com/embed/EVY3Utsala4"
-              title="COSMATE Demo"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
-            />
+            ></iframe>
           </div>
           {/* Monitor base */}
           <div className="flex justify-center mt-2">
